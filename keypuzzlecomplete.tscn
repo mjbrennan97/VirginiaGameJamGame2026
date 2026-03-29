@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bk4fyewyxarmo"]
+
+[ext_resource type="Texture2D" uid="uid://drflrw18f0bjl" path="res://assets/IMG_8626.png" id="1_u4wua"]
+[ext_resource type="PackedScene" uid="uid://b71cx5shc2qk5" path="res://screwdriverpickup.tscn" id="2_82skp"]
+[ext_resource type="Script" uid="uid://b2xnl5p02kuw1" path="res://control1room2.gd" id="3_pdg1j"]
+[ext_resource type="Texture2D" uid="uid://d1og85blhdh8d" path="res://assets/vic_2026_arrow_right_highlight.png" id="4_6thx1"]
+[ext_resource type="Texture2D" uid="uid://nfwyrrmae42d" path="res://assets/vic_2026_arrow_right_click.png" id="5_uaos1"]
+
+[node name="Node2D" type="Node2D" unique_id=331151390]
+
+[node name="Img8626" type="Sprite2D" parent="." unique_id=1406374690]
+position = Vector2(1282, 713)
+texture = ExtResource("1_u4wua")
+
+[node name="Area2D" parent="." unique_id=238413632 instance=ExtResource("2_82skp")]
+position = Vector2(283, 633)
+rotation = -0.6440265
+
+[node name="Control" type="Control" parent="." unique_id=1570234895]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2348.0
+offset_top = 582.0
+offset_right = 2572.0
+offset_bottom = 796.0
+script = ExtResource("3_pdg1j")
+metadata/_edit_use_anchors_ = true
+
+[node name="RightArrow" type="TextureButton" parent="Control" unique_id=419434140]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.09821428
+anchor_top = -0.04672883
+anchor_right = -0.09821428
+anchor_bottom = -0.04672883
+offset_left = 98.0
+offset_top = -11.0
+offset_right = 348.0
+offset_bottom = 239.0
+texture_normal = ExtResource("4_6thx1")
+texture_pressed = ExtResource("5_uaos1")
+texture_hover = ExtResource("4_6thx1")
+metadata/_edit_use_anchors_ = true

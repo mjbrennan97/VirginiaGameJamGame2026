@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://d1og85blhdh8d" path="res://assets/vic_2026_arrow_right_highlight.png" id="3_rdpt2"]
 [ext_resource type="Texture2D" uid="uid://nfwyrrmae42d" path="res://assets/vic_2026_arrow_right_click.png" id="4_m66jx"]
 [ext_resource type="Script" uid="uid://fa7u1jsqx0tk" path="res://controlroom1rear.gd" id="5_rimtl"]
+[ext_resource type="Texture2D" uid="uid://bwny6rcct7cfy" path="res://assets/vic_2026_door_openv2.png" id="6_o5es1"]
 [ext_resource type="Texture2D" uid="uid://cxaj5rb4xqvrp" path="res://assets/vic_2026_door_closed.png" id="6_pmoe4"]
-[ext_resource type="Texture2D" uid="uid://c8fqiw6u3hnc4" path="res://assets/vic_2026_door_open.png" id="6_tv20a"]
 [ext_resource type="Texture2D" uid="uid://bfnosnfmq74ov" path="res://assets/vic_2026_arrow_up.png" id="7_lxjps"]
 [ext_resource type="Script" uid="uid://dlyu0acyt22q5" path="res://control_3forwardarrowroom1left.gd" id="7_o5es1"]
 [ext_resource type="Texture2D" uid="uid://iualue1aq3to" path="res://assets/vic_2026_arrow_up_click.png" id="8_o5es1"]
@@ -61,7 +61,7 @@ texture_hover = ExtResource("3_rdpt2")
 [node name="Vic2026DoorOpen" type="Sprite2D" parent="." unique_id=2025327983]
 position = Vector2(1999.9999, 781)
 scale = Vector2(0.77592576, 0.7851851)
-texture = ExtResource("6_tv20a")
+texture = ExtResource("6_o5es1")
 
 [node name="Control3" type="Control" parent="." unique_id=2005073557]
 layout_mode = 3

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dx1b5ggivfo7i"]
+
+[ext_resource type="Script" uid="uid://cml21njwydlf1" path="res://keypickup.gd" id="1_66kdx"]
+[ext_resource type="Resource" uid="uid://h0uws0h70jn6" path="res://key.tres" id="2_e3x2s"]
+[ext_resource type="Texture2D" uid="uid://dk7h6xsgiuh8n" path="res://assets/vic_2026_key.png" id="3_isk68"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x6nio"]
+radius = 63.022434
+height = 345.19247
+
+[node name="Node2D" type="Area2D" unique_id=880393284]
+script = ExtResource("1_66kdx")
+item = ExtResource("2_e3x2s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1864155371]
+texture = ExtResource("3_isk68")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1460940853]
+rotation = 0.858702
+shape = SubResource("CapsuleShape2D_x6nio")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

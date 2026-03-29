@@ -5,6 +5,12 @@
 [ext_resource type="Script" uid="uid://cgymlyksm5iqk" path="res://control1room2right.gd" id="2_avrxh"]
 [ext_resource type="Texture2D" uid="uid://nfwyrrmae42d" path="res://assets/vic_2026_arrow_right_click.png" id="3_avrxh"]
 [ext_resource type="Script" uid="uid://ctnqaw20uosmb" path="res://control_2room2right.gd" id="5_mda3p"]
+[ext_resource type="PackedScene" uid="uid://whdithdlah4j" path="res://InventoryUI.tscn" id="6_mda3p"]
+[ext_resource type="Script" uid="uid://02y2hc34mbjq" path="res://openingcasescript.gd" id="7_hxov6"]
+[ext_resource type="Texture2D" uid="uid://bmhlp5wirwqxg" path="res://assets/caseclosed.png" id="8_3cwma"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxhgm"]
+size = Vector2(286, 102)
 
 [node name="Node2D" type="Node2D" unique_id=1340239755]
 
@@ -62,3 +68,27 @@ texture_pressed = ExtResource("3_avrxh")
 texture_hover = ExtResource("2_aif7g")
 flip_h = true
 metadata/_edit_use_anchors_ = true
+
+[node name="Control3" type="Control" parent="." unique_id=234498366]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="TextureButton" parent="Control3" unique_id=2038516608]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="CanvasLayer" parent="." unique_id=1739160554 instance=ExtResource("6_mda3p")]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=387189952]
+script = ExtResource("7_hxov6")
+
+[node name="Caseclosed" type="Sprite2D" parent="Area2D" unique_id=906440267]
+position = Vector2(1086, 782)
+texture = ExtResource("8_3cwma")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1278938678]
+position = Vector2(1089, 785)
+shape = SubResource("RectangleShape2D_xxhgm")

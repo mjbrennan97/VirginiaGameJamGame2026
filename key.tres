@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" format=3 uid="uid://h0uws0h70jn6"]
+
+[ext_resource type="Script" uid="uid://djl01cm877wxb" path="res://ItemData.gd" id="1_vaatp"]
+[ext_resource type="Texture2D" uid="uid://dk7h6xsgiuh8n" path="res://assets/vic_2026_key.png" id="2_3qx4b"]
+
+[resource]
+script = ExtResource("1_vaatp")
+item_name = "Key"
+description = "This is a key."
+texture = ExtResource("2_3qx4b")
+metadata/_custom_type_script = "uid://djl01cm877wxb"
