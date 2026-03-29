@@ -1,9 +1,10 @@
-[gd_scene format=3 uid="uid://bksb64pvy8kln"]
+[gd_scene load_steps=9 format=3 uid="uid://bksb64pvy8kln"]
 
 [ext_resource type="Texture2D" uid="uid://dasuf2xlscvft" path="res://assets/IMG_8625.png" id="1_5frya"]
 [ext_resource type="Texture2D" uid="uid://dk7h6xsgiuh8n" path="res://assets/vic_2026_key.png" id="2_7uter"]
 [ext_resource type="Script" uid="uid://bss4mgihbqfdc" path="res://character_body_2d.gd" id="2_8xipg"]
 [ext_resource type="Script" uid="uid://csge8y1cayvmt" path="res://keyenteringexitscript.gd" id="4_8xipg"]
+[ext_resource type="AudioStream" uid="uid://brwv03owf80s4" path="res://assets/songs/key-jiggle.wav" id="4_cugc3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7uter"]
 size = Vector2(22, 384)
@@ -15,50 +16,53 @@ height = 158.60242
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cugc3"]
 size = Vector2(255, 266)
 
-[node name="Node2D" type="Node2D" unique_id=2012898562]
+[node name="Node2D" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=77420415]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1278, 717)
 
-[node name="Img8625" type="Sprite2D" parent="StaticBody2D" unique_id=577697402]
+[node name="Img8625" type="Sprite2D" parent="StaticBody2D"]
 texture = ExtResource("1_5frya")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=278509122]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(267, 394, 266, 39, 756, 33, 760, -629, -250, -628, -840, -630, -841, -700, 838, -699, 835, 54, 290, 57, 289, 399)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=409601292]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-1278, -717)
 build_mode = 1
 polygon = PackedVector2Array(2032, 772, 2039, 1348, 1811, 1351, 1810, 1035, 1788, 1031, 1787, 1343, 1296, 1348, 1293, 517, 1848, 510, 1849, 485, 1296, 482, 1293, 257, 1852, 249, 1846, 230, 1272, 237, 1271, 1347, 505, 1345, 506, 820, 751, 814, 751, 791, 508, 796, 509, 349, 458, 347, 461, 85, 439, 88, 438, 1413, 2113, 1413, 2119, 773)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=513923704]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-540, -431)
 shape = SubResource("RectangleShape2D_7uter")
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=989020533]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
 build_mode = 1
 polygon = PackedVector2Array(-271, -627, -265, 371, -571, 371, -573, 391, -246, 388, -242, -629)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=306764550]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(0, 141)
 script = ExtResource("2_8xipg")
 
-[node name="Vic2026Key" type="Sprite2D" parent="CharacterBody2D" unique_id=1276557008]
+[node name="Vic2026Key" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(1929, 1090)
 scale = Vector2(0.62787366, 0.63888896)
 texture = ExtResource("2_7uter")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1147328515]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(1931, 1091)
 rotation = 0.85346603
 shape = SubResource("CapsuleShape2D_7uter")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1653460124]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("4_cugc3")
+
+[node name="Area2D" type="Area2D" parent="."]
 position = Vector2(478, 148)
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("4_8xipg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1510765582]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(119, 68)
 shape = SubResource("RectangleShape2D_cugc3")
