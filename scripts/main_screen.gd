@@ -4,6 +4,7 @@ extends Control
 @onready var quit_button = $QuitButton
 
 func _ready():
+	MusicManager.play_music(preload("res://assets/songs/MenuTheme-Classicals.de.mp3"))
 	play_button.pressed.connect(_on_play_pressed)
 	quit_button.pressed.connect(_on_quit_pressed)
 
