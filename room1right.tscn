@@ -1,9 +1,52 @@
 [gd_scene format=3 uid="uid://di7w4gq4ql4lg"]
 
 [ext_resource type="Texture2D" uid="uid://bgiybj7ot21kr" path="res://assets/IMG_8601.png" id="1_rtv0l"]
+[ext_resource type="Script" uid="uid://bwuauxlfjxish" path="res://control_2room1right.gd" id="2_us5s3"]
+[ext_resource type="Texture2D" uid="uid://d1og85blhdh8d" path="res://assets/vic_2026_arrow_right_highlight.png" id="3_5rnxw"]
+[ext_resource type="Texture2D" uid="uid://nfwyrrmae42d" path="res://assets/vic_2026_arrow_right_click.png" id="4_ibc27"]
+[ext_resource type="Script" uid="uid://cso7bjp23ar4d" path="res://controlroom1right.gd" id="5_2xxpr"]
 
 [node name="Node2D" type="Node2D" unique_id=305229172]
 
 [node name="Img8601" type="Sprite2D" parent="." unique_id=183309028]
 position = Vector2(1281, 722)
 texture = ExtResource("1_rtv0l")
+
+[node name="Control2" type="Control" parent="." unique_id=1249730383]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 3161.0
+offset_top = 673.0
+offset_right = 3385.0
+offset_bottom = 887.0
+script = ExtResource("2_us5s3")
+
+[node name="LeftArrow" type="TextureButton" parent="Control2" unique_id=1799077816]
+layout_mode = 0
+offset_left = -3292.0
+offset_top = -104.0
+offset_right = -3042.0
+offset_bottom = 146.0
+texture_normal = ExtResource("3_5rnxw")
+texture_pressed = ExtResource("4_ibc27")
+texture_hover = ExtResource("3_5rnxw")
+flip_h = true
+
+[node name="Control" type="Control" parent="." unique_id=239921926]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2348.0
+offset_top = 582.0
+offset_right = 2572.0
+offset_bottom = 796.0
+script = ExtResource("5_2xxpr")
+
+[node name="RightArrow" type="TextureButton" parent="Control" unique_id=473363109]
+layout_mode = 0
+offset_left = 79.0
+offset_top = -7.0
+offset_right = 329.0
+offset_bottom = 243.0
+texture_normal = ExtResource("3_5rnxw")
+texture_pressed = ExtResource("4_ibc27")
+texture_hover = ExtResource("3_5rnxw")

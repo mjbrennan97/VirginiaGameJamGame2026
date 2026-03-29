@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://b7mrr7mh2qufm"]
+
+[ext_resource type="Texture2D" uid="uid://b12iumjufqw3r" path="res://assets/IMG_8621.png" id="1_mqvax"]
+[ext_resource type="Script" uid="uid://yf3rfubww0qj" path="res://control1rightarrow.gd" id="2_eatrc"]
+[ext_resource type="Texture2D" uid="uid://d1og85blhdh8d" path="res://assets/vic_2026_arrow_right_highlight.png" id="2_sxkhc"]
+[ext_resource type="Texture2D" uid="uid://nfwyrrmae42d" path="res://assets/vic_2026_arrow_right_click.png" id="3_eatrc"]
+[ext_resource type="Script" uid="uid://dn7rwdg6mksu1" path="res://control_2room2rear.gd" id="5_ov3qq"]
+
+[node name="Node2D" type="Node2D" unique_id=491032860]
+
+[node name="Img8600" type="Sprite2D" parent="." unique_id=1644414562]
+position = Vector2(1280, 720)
+texture = ExtResource("1_mqvax")
+
+[node name="Control" type="Control" parent="." unique_id=29152403]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2348.0
+offset_top = 582.0
+offset_right = 2572.0
+offset_bottom = 796.0
+script = ExtResource("2_eatrc")
+metadata/_edit_use_anchors_ = true
+
+[node name="RightArrow" type="TextureButton" parent="Control" unique_id=1232441099]
+layout_mode = 0
+offset_left = 98.0
+offset_top = -11.0
+offset_right = 348.0
+offset_bottom = 239.0
+texture_normal = ExtResource("2_sxkhc")
+texture_pressed = ExtResource("3_eatrc")
+texture_hover = ExtResource("2_sxkhc")
+metadata/_edit_use_anchors_ = true
+
+[node name="Control2" type="Control" parent="." unique_id=904166277]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 3161.0
+offset_top = 673.0
+offset_right = 3385.0
+offset_bottom = 887.0
+script = ExtResource("5_ov3qq")
+metadata/_edit_use_anchors_ = true
+
+[node name="LeftArrow" type="TextureButton" parent="Control2" unique_id=439977823]
+layout_mode = 0
+offset_left = -3292.0
+offset_top = -104.0
+offset_right = -3042.0
+offset_bottom = 146.0
+texture_normal = ExtResource("2_sxkhc")
+texture_pressed = ExtResource("3_eatrc")
+texture_hover = ExtResource("2_sxkhc")
+flip_h = true
+metadata/_edit_use_anchors_ = true

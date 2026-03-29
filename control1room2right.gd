@@ -7,4 +7,4 @@ func _ready():
 
 func _on_button_pressed():
 	GameState.label_visible = false
-	get_tree().change_scene_to_file("res://room1right.tscn")
+	get_tree().change_scene_to_file("res://room2rear.tscn")

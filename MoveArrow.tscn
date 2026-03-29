@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://l7ekfti6r62w"]
+
+[ext_resource type="Script" uid="uid://bi0e6h2tyicne" path="res://scenes/control.gd" id="1_gbsnd"]
+[ext_resource type="Texture2D" uid="uid://d1og85blhdh8d" path="res://assets/vic_2026_arrow_right_highlight.png" id="2_sl2f4"]
+[ext_resource type="Texture2D" uid="uid://nfwyrrmae42d" path="res://assets/vic_2026_arrow_right_click.png" id="3_xvvie"]
+
+[node name="Control" type="Control" unique_id=668264264]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -88.0
+offset_top = -121.0
+offset_right = 75.0
+offset_bottom = 118.0
+script = ExtResource("1_gbsnd")
+
+[node name="RightArrow" type="TextureButton" parent="." unique_id=1033823996]
+layout_mode = 0
+offset_left = 27.0
+offset_right = 277.0
+offset_bottom = 250.0
+texture_normal = ExtResource("2_sl2f4")
+texture_pressed = ExtResource("3_xvvie")
+texture_hover = ExtResource("2_sl2f4")

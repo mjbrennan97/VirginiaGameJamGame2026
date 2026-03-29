@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://ipa5n3yc3105"]
 
 [ext_resource type="Script" uid="uid://bap7mtfdf05pj" path="res://scenes/room_1.gd" id="1_277jj"]
-[ext_resource type="Texture2D" uid="uid://cxaj5rb4xqvrp" path="res://assets/vic_2026_door_closed.png" id="2_gli6d"]
 [ext_resource type="Texture2D" uid="uid://bg4dlglh0ht05" path="res://assets/IMG_8600.png" id="3_277jj"]
 [ext_resource type="Script" uid="uid://bi0e6h2tyicne" path="res://scenes/control.gd" id="4_dtrb7"]
 [ext_resource type="Texture2D" uid="uid://d1og85blhdh8d" path="res://assets/vic_2026_arrow_right_highlight.png" id="5_npsde"]
 [ext_resource type="Texture2D" uid="uid://nfwyrrmae42d" path="res://assets/vic_2026_arrow_right_click.png" id="6_ml6mh"]
+[ext_resource type="Script" uid="uid://cbfjbsu5lvww3" path="res://scenes/control_2.gd" id="7_dtrb7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_277jj"]
 font_size = 61
@@ -19,12 +19,8 @@ script = ExtResource("1_277jj")
 position = Vector2(1280, 720)
 texture = ExtResource("3_277jj")
 
-[node name="Vic2026DoorClosed" type="Sprite2D" parent="." unique_id=924924981]
-position = Vector2(1696, 821)
-scale = Vector2(0.65462965, 0.70444447)
-texture = ExtResource("2_gli6d")
-
 [node name="FadeInLabel" type="Label" parent="." unique_id=83392611]
+visible = false
 offset_left = 742.0
 offset_top = 641.0
 offset_right = 1827.0
@@ -43,10 +39,30 @@ script = ExtResource("4_dtrb7")
 
 [node name="RightArrow" type="TextureButton" parent="Control" unique_id=1558232867]
 layout_mode = 0
-offset_left = 28.0
-offset_top = 4.0
-offset_right = 208.0
-offset_bottom = 188.0
+offset_left = 98.0
+offset_top = -11.0
+offset_right = 348.0
+offset_bottom = 239.0
 texture_normal = ExtResource("5_npsde")
 texture_pressed = ExtResource("6_ml6mh")
 texture_hover = ExtResource("5_npsde")
+
+[node name="Control2" type="Control" parent="." unique_id=1497622349]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 3161.0
+offset_top = 673.0
+offset_right = 3385.0
+offset_bottom = 887.0
+script = ExtResource("7_dtrb7")
+
+[node name="LeftArrow" type="TextureButton" parent="Control2" unique_id=2006121553]
+layout_mode = 0
+offset_left = -3292.0
+offset_top = -104.0
+offset_right = -3042.0
+offset_bottom = 146.0
+texture_normal = ExtResource("5_npsde")
+texture_pressed = ExtResource("6_ml6mh")
+texture_hover = ExtResource("5_npsde")
+flip_h = true
