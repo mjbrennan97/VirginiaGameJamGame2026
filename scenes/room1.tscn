@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ipa5n3yc3105"]
+[gd_scene load_steps=13 format=3 uid="uid://ipa5n3yc3105"]
 
 [ext_resource type="Script" uid="uid://bap7mtfdf05pj" path="res://scenes/room_1.gd" id="1_277jj"]
 [ext_resource type="Texture2D" uid="uid://bg4dlglh0ht05" path="res://assets/IMG_8600.png" id="3_277jj"]
@@ -21,7 +21,7 @@ size = Vector2(257, 232)
 [node name="Node2D" type="Node2D" unique_id=1546260162]
 script = ExtResource("1_277jj")
 
-[node name="Img8600" type="Sprite2D" parent="." unique_id=873147372]
+[node name="Img8600" type="Sprite2D" parent="."]
 position = Vector2(1280, 720)
 texture = ExtResource("3_277jj")
 
@@ -46,7 +46,27 @@ offset_bottom = 796.0
 mouse_filter = 2
 script = ExtResource("4_dtrb7")
 
-[node name="RightArrow" type="TextureButton" parent="Control" unique_id=1558232867]
+[node name="RightArrow" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 414.0
+offset_right = 320.0
+offset_bottom = 664.0
+texture_normal = ExtResource("5_npsde")
+texture_pressed = ExtResource("6_ml6mh")
+texture_hover = ExtResource("5_npsde")
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = 616.0
+offset_right = 228.0
+offset_bottom = 830.0
+mouse_filter = 2
+script = ExtResource("7_dtrb7")
+
+[node name="LeftArrow" type="TextureButton" parent="Control2"]
 layout_mode = 0
 offset_left = 70.0
 offset_top = 414.0

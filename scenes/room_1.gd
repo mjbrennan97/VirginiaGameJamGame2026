@@ -5,6 +5,7 @@ extends Node2D
 func _ready():
 	your_label.visible = GameState.label_visible
 	_fade_in()
+	MusicManager.play_music(preload("res://assets/songs/MenuTheme-Classicals.de.mp3"))
 
 func _fade_in():
 	if GameState.has_faded_in:
