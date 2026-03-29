@@ -1,5 +1,5 @@
 # ItemData.gd
-class_name ItemData
+class_name InventoryItemData
 extends Resource
  
 @export var item_name: String = ""

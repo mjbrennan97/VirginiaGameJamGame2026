@@ -23,7 +23,12 @@ script = ExtResource("2_d3vgx")
 metadata/_edit_use_anchors_ = true
 
 [node name="RightArrow" type="TextureButton" parent="Control" unique_id=1909083616]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.09375
+anchor_top = 2.1448598
+anchor_right = -0.09375
+anchor_bottom = 2.1448598
 offset_left = 98.0
 offset_top = -11.0
 offset_right = 348.0
@@ -44,7 +49,12 @@ script = ExtResource("5_qi0cb")
 metadata/_edit_use_anchors_ = true
 
 [node name="LeftArrow" type="TextureButton" parent="Control2" unique_id=1302622706]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08035714
+anchor_top = 2.172897
+anchor_right = 0.08035714
+anchor_bottom = 2.172897
 offset_left = -3292.0
 offset_top = -104.0
 offset_right = -3042.0

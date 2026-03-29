@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" format=3 uid="uid://bemmuoaitvphj"]
+
+[ext_resource type="Script" uid="uid://djl01cm877wxb" path="res://ItemData.gd" id="1_jsyj7"]
+[ext_resource type="Texture2D" uid="uid://cir6bio6lxat" path="res://assets/vic_2026_screwdriver.png" id="2_ndchd"]
+
+[resource]
+script = ExtResource("1_jsyj7")
+item_name = "Screwdriver"
+description = "This is a screwdriver"
+texture = ExtResource("2_ndchd")
+metadata/_custom_type_script = "uid://djl01cm877wxb"

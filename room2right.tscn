@@ -22,7 +22,12 @@ offset_bottom = 796.0
 script = ExtResource("2_avrxh")
 
 [node name="RightArrow" type="TextureButton" parent="Control" unique_id=1830473198]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.125
+anchor_top = 2.1168225
+anchor_right = -0.125
+anchor_bottom = 2.1168225
 offset_left = 98.0
 offset_top = -11.0
 offset_right = 348.0
@@ -42,7 +47,12 @@ offset_bottom = 887.0
 script = ExtResource("5_mda3p")
 
 [node name="LeftArrow" type="TextureButton" parent="Control2" unique_id=1430131628]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08035714
+anchor_top = 2.1542056
+anchor_right = 0.08035714
+anchor_bottom = 2.1542056
 offset_left = -3292.0
 offset_top = -104.0
 offset_right = -3042.0

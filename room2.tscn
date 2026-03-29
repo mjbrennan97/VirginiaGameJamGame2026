@@ -28,7 +28,12 @@ script = ExtResource("2_kgaip")
 metadata/_edit_use_anchors_ = true
 
 [node name="RightArrow" type="TextureButton" parent="Control" unique_id=1254071019]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.071428575
+anchor_top = 2.046729
+anchor_right = -0.071428575
+anchor_bottom = 2.046729
 offset_left = 98.0
 offset_top = -11.0
 offset_right = 348.0
@@ -49,7 +54,12 @@ script = ExtResource("5_7on73")
 metadata/_edit_use_anchors_ = true
 
 [node name="LeftArrow" type="TextureButton" parent="Control2" unique_id=1670528308]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.102678575
+anchor_top = 2.0841122
+anchor_right = 0.102678575
+anchor_bottom = 2.0841122
 offset_left = -3292.0
 offset_top = -104.0
 offset_right = -3042.0

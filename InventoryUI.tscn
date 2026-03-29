@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://whdithdlah4j"]
+
+[ext_resource type="PackedScene" uid="uid://cjpei7mmr5wuq" path="res://InventorySlot.tscn" id="1_dsn3v"]
+[ext_resource type="Script" uid="uid://cppxq31d8gqc3" path="res://inventory_ui.gd" id="1_xlonu"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1739160554]
+scale = Vector2(5, 5)
+transform = Transform2D(5, 0, 0, 5, 0, 0)
+script = ExtResource("1_xlonu")
+
+[node name="Panel" type="Panel" parent="." unique_id=330004777]
+offset_right = 10.0
+
+[node name="GridContainer" type="GridContainer" parent="Panel" unique_id=1609871389]
+layout_mode = 0
+offset_right = 42.0
+offset_bottom = 172.0
+
+[node name="PanelContainer" parent="Panel/GridContainer" unique_id=1518564218 instance=ExtResource("1_dsn3v")]
+layout_mode = 2
+
+[node name="PanelContainer2" parent="Panel/GridContainer" unique_id=1320132120 instance=ExtResource("1_dsn3v")]
+layout_mode = 2
+
+[node name="PanelContainer3" parent="Panel/GridContainer" unique_id=2072512896 instance=ExtResource("1_dsn3v")]
+layout_mode = 2
+
+[node name="PanelContainer4" parent="Panel/GridContainer" unique_id=1810512994 instance=ExtResource("1_dsn3v")]
+layout_mode = 2

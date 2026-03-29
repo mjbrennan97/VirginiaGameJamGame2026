@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bksb64pvy8kln"]
+
+[ext_resource type="Texture2D" uid="uid://dasuf2xlscvft" path="res://assets/IMG_8625.png" id="1_5frya"]
+[ext_resource type="Texture2D" uid="uid://dk7h6xsgiuh8n" path="res://assets/vic_2026_key.png" id="2_7uter"]
+
+[node name="Img8625" type="Sprite2D" unique_id=12869619]
+position = Vector2(1279, 721)
+texture = ExtResource("1_5frya")
+
+[node name="Vic2026Key" type="Sprite2D" parent="." unique_id=1234163046]
+position = Vector2(644, 509)
+scale = Vector2(0.6034483, 0.62457913)
+texture = ExtResource("2_7uter")

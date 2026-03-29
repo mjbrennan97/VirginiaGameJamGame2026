@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b71cx5shc2qk5"]
+
+[ext_resource type="Script" uid="uid://cdsblkqtmdkqm" path="res://screwdriverpickup.gd" id="1_jra80"]
+[ext_resource type="Texture2D" uid="uid://cir6bio6lxat" path="res://assets/vic_2026_screwdriver.png" id="2_a3kr5"]
+[ext_resource type="Resource" uid="uid://bemmuoaitvphj" path="res://screwdriver.tres" id="2_yoymv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yoymv"]
+radius = 54.636154
+height = 389.5203
+
+[node name="Area2D" type="Area2D" unique_id=238413632]
+script = ExtResource("1_jra80")
+item = ExtResource("2_yoymv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1400211252]
+texture = ExtResource("2_a3kr5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=46803678]
+rotation = 0.89709926
+shape = SubResource("CapsuleShape2D_yoymv")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

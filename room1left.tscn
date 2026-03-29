@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://dlyu0acyt22q5" path="res://control_3forwardarrowroom1left.gd" id="7_o5es1"]
 [ext_resource type="Texture2D" uid="uid://iualue1aq3to" path="res://assets/vic_2026_arrow_up_click.png" id="8_o5es1"]
 [ext_resource type="Texture2D" uid="uid://c4ny265du4y0u" path="res://assets/vic_2026_arrow_up_highlight.png" id="9_wlv3v"]
+[ext_resource type="PackedScene" uid="uid://whdithdlah4j" path="res://InventoryUI.tscn" id="12_o5es1"]
 
 [node name="Node2D" type="Node2D" unique_id=593777903]
 
@@ -29,10 +30,10 @@ script = ExtResource("2_m66jx")
 
 [node name="LeftArrow" type="TextureButton" parent="Control2" unique_id=1731548812]
 layout_mode = 0
-offset_left = -3292.0
-offset_top = -104.0
-offset_right = -3042.0
-offset_bottom = 146.0
+offset_left = -3284.0
+offset_top = 288.0
+offset_right = -3034.0
+offset_bottom = 538.0
 texture_normal = ExtResource("3_rdpt2")
 texture_pressed = ExtResource("4_m66jx")
 texture_hover = ExtResource("3_rdpt2")
@@ -49,10 +50,10 @@ script = ExtResource("5_rimtl")
 
 [node name="RightArrow" type="TextureButton" parent="Control" unique_id=171548855]
 layout_mode = 0
-offset_left = 79.0
-offset_top = -7.0
-offset_right = 329.0
-offset_bottom = 243.0
+offset_left = 95.0
+offset_top = 393.0
+offset_right = 345.0
+offset_bottom = 643.0
 texture_normal = ExtResource("3_rdpt2")
 texture_pressed = ExtResource("4_m66jx")
 texture_hover = ExtResource("3_rdpt2")
@@ -86,3 +87,5 @@ visible = false
 position = Vector2(1999.9999, 781)
 scale = Vector2(0.77592576, 0.7851851)
 texture = ExtResource("6_pmoe4")
+
+[node name="CanvasLayer" parent="." unique_id=1739160554 instance=ExtResource("12_o5es1")]

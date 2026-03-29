@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cjpei7mmr5wuq"]
+
+[node name="PanelContainer" type="PanelContainer" unique_id=1518564218]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2029406723]
+layout_mode = 2
+expand_mode = 3
+
+[node name="Label" type="Label" parent="." unique_id=139159662]
+layout_mode = 2

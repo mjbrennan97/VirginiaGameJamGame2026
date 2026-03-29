@@ -6,11 +6,18 @@
 [ext_resource type="Texture2D" uid="uid://d1og85blhdh8d" path="res://assets/vic_2026_arrow_right_highlight.png" id="5_npsde"]
 [ext_resource type="Texture2D" uid="uid://nfwyrrmae42d" path="res://assets/vic_2026_arrow_right_click.png" id="6_ml6mh"]
 [ext_resource type="Script" uid="uid://cbfjbsu5lvww3" path="res://scenes/control_2.gd" id="7_dtrb7"]
+[ext_resource type="PackedScene" uid="uid://whdithdlah4j" path="res://InventoryUI.tscn" id="7_npsde"]
+[ext_resource type="Texture2D" uid="uid://blwv2o7ssf5s1" path="res://assets/IMG_8604.png" id="8_npsde"]
+[ext_resource type="Script" uid="uid://wmtdekyad1rl" path="res://scenes/area_2d_2.gd" id="9_3k0wu"]
+[ext_resource type="PackedScene" uid="uid://b71cx5shc2qk5" path="res://screwdriverpickup.tscn" id="9_ml6mh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_277jj"]
 font_size = 61
 font_color = Color(0, 0, 0, 1)
 outline_size = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxjkn"]
+size = Vector2(257, 232)
 
 [node name="Node2D" type="Node2D" unique_id=1546260162]
 script = ExtResource("1_277jj")
@@ -28,6 +35,8 @@ offset_bottom = 850.0
 text = "You wake up in an unfamiliar room..."
 label_settings = SubResource("LabelSettings_277jj")
 
+[node name="CanvasLayer" parent="." unique_id=1739160554 instance=ExtResource("7_npsde")]
+
 [node name="Control" type="Control" parent="." unique_id=250498091]
 layout_mode = 3
 anchors_preset = 0
@@ -35,14 +44,15 @@ offset_left = 2348.0
 offset_top = 582.0
 offset_right = 2572.0
 offset_bottom = 796.0
+mouse_filter = 2
 script = ExtResource("4_dtrb7")
 
 [node name="RightArrow" type="TextureButton" parent="Control" unique_id=1558232867]
 layout_mode = 0
-offset_left = 98.0
-offset_top = -11.0
-offset_right = 348.0
-offset_bottom = 239.0
+offset_left = 70.0
+offset_top = 414.0
+offset_right = 320.0
+offset_bottom = 664.0
 texture_normal = ExtResource("5_npsde")
 texture_pressed = ExtResource("6_ml6mh")
 texture_hover = ExtResource("5_npsde")
@@ -50,19 +60,38 @@ texture_hover = ExtResource("5_npsde")
 [node name="Control2" type="Control" parent="." unique_id=1497622349]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 3161.0
-offset_top = 673.0
-offset_right = 3385.0
-offset_bottom = 887.0
+offset_left = 4.0
+offset_top = 616.0
+offset_right = 228.0
+offset_bottom = 830.0
+mouse_filter = 2
 script = ExtResource("7_dtrb7")
 
 [node name="LeftArrow" type="TextureButton" parent="Control2" unique_id=2006121553]
 layout_mode = 0
-offset_left = -3292.0
-offset_top = -104.0
-offset_right = -3042.0
-offset_bottom = 146.0
+offset_left = -112.0
+offset_top = 373.0
+offset_right = 138.0
+offset_bottom = 623.0
 texture_normal = ExtResource("5_npsde")
 texture_pressed = ExtResource("6_ml6mh")
 texture_hover = ExtResource("5_npsde")
 flip_h = true
+
+[node name="Area2D" parent="." unique_id=238413632 instance=ExtResource("9_ml6mh")]
+position = Vector2(1341, 1141)
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=511166522]
+script = ExtResource("9_3k0wu")
+
+[node name="Img8604" type="Sprite2D" parent="Area2D2" unique_id=667547266]
+position = Vector2(769, 678)
+rotation = 0.15533431
+texture = ExtResource("8_npsde")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=141216745]
+position = Vector2(764, 684)
+rotation = 0.15533431
+shape = SubResource("RectangleShape2D_kxjkn")
+
+[connection signal="input_event" from="Area2D2" to="Area2D2" method="_on_input_event"]

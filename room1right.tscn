@@ -23,10 +23,10 @@ script = ExtResource("2_us5s3")
 
 [node name="LeftArrow" type="TextureButton" parent="Control2" unique_id=1799077816]
 layout_mode = 0
-offset_left = -3292.0
-offset_top = -104.0
-offset_right = -3042.0
-offset_bottom = 146.0
+offset_left = -3259.0
+offset_top = 346.0
+offset_right = -3009.0
+offset_bottom = 596.0
 texture_normal = ExtResource("3_5rnxw")
 texture_pressed = ExtResource("4_ibc27")
 texture_hover = ExtResource("3_5rnxw")
@@ -44,9 +44,9 @@ script = ExtResource("5_2xxpr")
 [node name="RightArrow" type="TextureButton" parent="Control" unique_id=473363109]
 layout_mode = 0
 offset_left = 79.0
-offset_top = -7.0
+offset_top = 410.0
 offset_right = 329.0
-offset_bottom = 243.0
+offset_bottom = 660.0
 texture_normal = ExtResource("3_5rnxw")
 texture_pressed = ExtResource("4_ibc27")
 texture_hover = ExtResource("3_5rnxw")
