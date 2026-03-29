@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6yrd20b4mlry"]
+
+[ext_resource type="Texture2D" uid="uid://dxprrm4tvlf8t" path="res://assets/folded_paper.png" id="1_3pa6n"]
+[ext_resource type="Script" uid="uid://bbu3kd2wdpf5b" path="res://folded_paper.gd" id="1_5dfpy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5dfpy"]
+size = Vector2(268, 118)
+
+[node name="folded_letter1" type="Area2D"]
+script = ExtResource("1_5dfpy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3pa6n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9, 2)
+shape = SubResource("RectangleShape2D_5dfpy")

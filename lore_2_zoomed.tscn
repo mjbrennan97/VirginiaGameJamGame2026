@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwjd5svpdr505"]
+
+[ext_resource type="Script" uid="uid://cdknhaptuldxl" path="res://lore_2_zoomed.gd" id="1_6uhq5"]
+[ext_resource type="Texture2D" uid="uid://dusu42ucrdggq" path="res://assets/lore2.png" id="2_av3na"]
+[ext_resource type="Texture2D" uid="uid://nfwyrrmae42d" path="res://assets/vic_2026_arrow_right_click.png" id="3_ldudf"]
+
+[node name="lore2_zoomed" type="Node2D"]
+script = ExtResource("1_6uhq5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1281, 719.50006)
+scale = Vector2(2.3152175, 1.533618)
+texture = ExtResource("2_av3na")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 2276.0
+offset_top = 679.0
+offset_right = 2526.0
+offset_bottom = 929.0
+texture_normal = ExtResource("3_ldudf")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

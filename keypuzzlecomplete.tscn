@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://bk4fyewyxarmo"]
 
+[ext_resource type="Script" uid="uid://jhid1ttd8ylg" path="res://keypuzzlecomplete.gd" id="1_6thx1"]
 [ext_resource type="Texture2D" uid="uid://drflrw18f0bjl" path="res://assets/IMG_8626.png" id="1_u4wua"]
 [ext_resource type="PackedScene" uid="uid://b71cx5shc2qk5" path="res://screwdriverpickup.tscn" id="2_82skp"]
 [ext_resource type="AudioStream" uid="uid://bqtjn0u054lr" path="res://assets/songs/keyswipe.wav" id="3_82skp"]
 [ext_resource type="Script" uid="uid://b2xnl5p02kuw1" path="res://control1room2.gd" id="3_pdg1j"]
 [ext_resource type="Texture2D" uid="uid://d1og85blhdh8d" path="res://assets/vic_2026_arrow_right_highlight.png" id="4_6thx1"]
 [ext_resource type="Texture2D" uid="uid://nfwyrrmae42d" path="res://assets/vic_2026_arrow_right_click.png" id="5_uaos1"]
+[ext_resource type="Texture2D" uid="uid://dxprrm4tvlf8t" path="res://assets/folded_paper.png" id="8_uaos1"]
 
 [node name="Node2D" type="Node2D" unique_id=1650891728]
 

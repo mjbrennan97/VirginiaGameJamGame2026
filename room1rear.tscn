@@ -1,20 +1,23 @@
-[gd_scene format=3 uid="uid://dj572r7xuyv4u"]
+[gd_scene load_steps=10 format=3 uid="uid://dj572r7xuyv4u"]
 
 [ext_resource type="Texture2D" uid="uid://xnrha6xkwwq1" path="res://assets/IMG_8602.png" id="1_2h1ks"]
+[ext_resource type="Script" uid="uid://dcs45y75w1fuy" path="res://room_1_rear.gd" id="1_ypt5e"]
 [ext_resource type="Script" uid="uid://bfkwv1j5t2tli" path="res://control_2room1left.gd" id="2_86rlp"]
 [ext_resource type="Texture2D" uid="uid://d1og85blhdh8d" path="res://assets/vic_2026_arrow_right_highlight.png" id="3_i1yjl"]
 [ext_resource type="Texture2D" uid="uid://nfwyrrmae42d" path="res://assets/vic_2026_arrow_right_click.png" id="4_d88we"]
 [ext_resource type="Script" uid="uid://scyv8gh7diyu" path="res://controlroom1left.gd" id="5_i1yjl"]
 [ext_resource type="PackedScene" uid="uid://dx1b5ggivfo7i" path="res://keypickup.tscn" id="6_86rlp"]
 [ext_resource type="PackedScene" uid="uid://whdithdlah4j" path="res://InventoryUI.tscn" id="7_i1yjl"]
+[ext_resource type="Texture2D" uid="uid://dxprrm4tvlf8t" path="res://assets/folded_paper.png" id="9_6vwnh"]
 
-[node name="Node2D" type="Node2D" unique_id=460754287]
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ypt5e")
 
-[node name="Img8601" type="Sprite2D" parent="." unique_id=769320922]
+[node name="Img8601" type="Sprite2D" parent="."]
 position = Vector2(1280, 720)
 texture = ExtResource("1_2h1ks")
 
-[node name="Control2" type="Control" parent="." unique_id=1560091432]
+[node name="Control2" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 5509.0
@@ -23,7 +26,7 @@ offset_right = 5733.0
 offset_bottom = 1469.0
 script = ExtResource("2_86rlp")
 
-[node name="LeftArrow" type="TextureButton" parent="Control2" unique_id=1368938229]
+[node name="LeftArrow" type="TextureButton" parent="Control2"]
 layout_mode = 0
 offset_left = -5608.0
 offset_top = -245.0
@@ -34,7 +37,7 @@ texture_pressed = ExtResource("4_d88we")
 texture_hover = ExtResource("3_i1yjl")
 flip_h = true
 
-[node name="Control" type="Control" parent="." unique_id=1953170470]
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 2348.0
@@ -43,7 +46,7 @@ offset_right = 2572.0
 offset_bottom = 796.0
 script = ExtResource("5_i1yjl")
 
-[node name="RightArrow" type="TextureButton" parent="Control" unique_id=1015329062]
+[node name="RightArrow" type="TextureButton" parent="Control"]
 layout_mode = 0
 offset_left = 69.0
 offset_top = 428.0
@@ -53,9 +56,18 @@ texture_normal = ExtResource("3_i1yjl")
 texture_pressed = ExtResource("4_d88we")
 texture_hover = ExtResource("3_i1yjl")
 
-[node name="Node2D" parent="." unique_id=880393284 instance=ExtResource("6_86rlp")]
+[node name="Node2D" parent="." instance=ExtResource("6_86rlp")]
 position = Vector2(942, 1273.0001)
 rotation = 1.5044738
 scale = Vector2(0.2, 0.2)
 
-[node name="CanvasLayer" parent="." unique_id=1739160554 instance=ExtResource("7_i1yjl")]
+[node name="CanvasLayer" parent="." instance=ExtResource("7_i1yjl")]
+
+[node name="letter-lore1" type="TextureButton" parent="."]
+offset_left = 317.0
+offset_top = 1062.0
+offset_right = 665.0
+offset_bottom = 1359.0
+texture_normal = ExtResource("9_6vwnh")
+
+[connection signal="pressed" from="letter-lore1" to="." method="_on_letterlore_1_pressed"]
