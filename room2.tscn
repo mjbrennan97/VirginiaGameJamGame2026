@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://cgq00gtowgab"]
+[gd_scene load_steps=13 format=3 uid="uid://cgq00gtowgab"]
 
 [ext_resource type="Texture2D" uid="uid://cywi8xs0dg18q" path="res://assets/IMG_8619.png" id="1_08gkj"]
+[ext_resource type="Script" uid="uid://cv54ktnwxwbh8" path="res://room_2.gd" id="1_cv072"]
 [ext_resource type="Texture2D" uid="uid://d1og85blhdh8d" path="res://assets/vic_2026_arrow_right_highlight.png" id="2_j7v4n"]
 [ext_resource type="Script" uid="uid://b2xnl5p02kuw1" path="res://control1room2.gd" id="2_kgaip"]
 [ext_resource type="Texture2D" uid="uid://nfwyrrmae42d" path="res://assets/vic_2026_arrow_right_click.png" id="3_kgaip"]
@@ -12,13 +13,14 @@
 [ext_resource type="Texture2D" uid="uid://emcvg2o787ac" path="res://assets/vic_2026_arrow_down_highlight.png" id="9_cv072"]
 [ext_resource type="PackedScene" uid="uid://whdithdlah4j" path="res://InventoryUI.tscn" id="11_1id8r"]
 
-[node name="Node2D" type="Node2D" unique_id=491141579]
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_cv072")
 
-[node name="Img8600" type="Sprite2D" parent="." unique_id=1332260858]
+[node name="Img8600" type="Sprite2D" parent="."]
 position = Vector2(1280, 720)
 texture = ExtResource("1_08gkj")
 
-[node name="Control" type="Control" parent="." unique_id=1245224970]
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 2348.0
@@ -28,7 +30,7 @@ offset_bottom = 796.0
 script = ExtResource("2_kgaip")
 metadata/_edit_use_anchors_ = true
 
-[node name="RightArrow" type="TextureButton" parent="Control" unique_id=1254071019]
+[node name="RightArrow" type="TextureButton" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.071428575
@@ -44,7 +46,7 @@ texture_pressed = ExtResource("3_kgaip")
 texture_hover = ExtResource("2_j7v4n")
 metadata/_edit_use_anchors_ = true
 
-[node name="Control2" type="Control" parent="." unique_id=1787111701]
+[node name="Control2" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 3161.0
@@ -54,7 +56,7 @@ offset_bottom = 887.0
 script = ExtResource("5_7on73")
 metadata/_edit_use_anchors_ = true
 
-[node name="LeftArrow" type="TextureButton" parent="Control2" unique_id=1670528308]
+[node name="LeftArrow" type="TextureButton" parent="Control2"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.102678575
@@ -71,12 +73,12 @@ texture_hover = ExtResource("2_j7v4n")
 flip_h = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Vic2026DoorOpen" type="Sprite2D" parent="." unique_id=673352442]
+[node name="Vic2026DoorOpen" type="Sprite2D" parent="."]
 position = Vector2(596, 779.99994)
 scale = Vector2(0.80833334, 0.78444445)
 texture = ExtResource("6_beyeo")
 
-[node name="Control3" type="Control" parent="." unique_id=946250299]
+[node name="Control3" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 2874.0
@@ -86,7 +88,7 @@ offset_bottom = 1066.0
 script = ExtResource("7_1id8r")
 metadata/_edit_use_anchors_ = true
 
-[node name="BackArrow" type="TextureButton" parent="Control3" unique_id=1804134957]
+[node name="BackArrow" type="TextureButton" parent="Control3"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 3.8973215
@@ -102,4 +104,4 @@ texture_pressed = ExtResource("8_1id8r")
 texture_hover = ExtResource("9_cv072")
 metadata/_edit_use_anchors_ = true
 
-[node name="CanvasLayer" parent="." unique_id=1739160554 instance=ExtResource("11_1id8r")]
+[node name="CanvasLayer" parent="." instance=ExtResource("11_1id8r")]
