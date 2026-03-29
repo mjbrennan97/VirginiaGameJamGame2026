@@ -69,17 +69,6 @@ texture_hover = ExtResource("2_aif7g")
 flip_h = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Control3" type="Control" parent="." unique_id=234498366]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Button" type="TextureButton" parent="Control3" unique_id=2038516608]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-
 [node name="CanvasLayer" parent="." unique_id=1739160554 instance=ExtResource("6_mda3p")]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=387189952]

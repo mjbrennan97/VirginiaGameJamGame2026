@@ -1,28 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://qws1ir3wwjk6"]
+[gd_scene format=3 uid="uid://qws1ir3wwjk6"]
 
 [ext_resource type="Script" uid="uid://cgobhq3jlfaou" path="res://scripts/main_screen.gd" id="1_w0p2i"]
 [ext_resource type="Texture2D" uid="uid://dlfbuakg58tyt" path="res://assets/IMG_8598.png" id="2_7a4el"]
-
-[sub_resource type="FontVariation" id="FontVariation_w0p2i"]
+[ext_resource type="FontFile" uid="uid://b54fgs384lp87" path="res://Ravenscroft.ttf" id="3_7a4el"]
 
 [sub_resource type="FontVariation" id="FontVariation_7a4el"]
-base_font = SubResource("FontVariation_w0p2i")
+base_font = ExtResource("3_7a4el")
 
 [sub_resource type="LabelSettings" id="LabelSettings_kwhh3"]
 font = SubResource("FontVariation_7a4el")
-font_size = 90
+font_size = 100
 font_color = Color(0, 0, 0, 1)
 
-[node name="MainScreen" type="Control"]
+[node name="MainScreen" type="Control" unique_id=47787945]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_w0p2i")
 
-[node name="Img8598" type="Sprite2D" parent="."]
+[node name="Img8598" type="Sprite2D" parent="." unique_id=1835354990]
 position = Vector2(1282, 715)
 texture = ExtResource("2_7a4el")
 
-[node name="PlayButton" type="Button" parent="."]
+[node name="PlayButton" type="Button" parent="." unique_id=352328046]
 layout_mode = 0
 offset_left = 366.0
 offset_top = 470.0
@@ -30,7 +29,7 @@ offset_right = 880.0
 offset_bottom = 539.0
 text = "Play"
 
-[node name="QuitButton" type="Button" parent="."]
+[node name="QuitButton" type="Button" parent="." unique_id=1015309011]
 layout_mode = 0
 offset_left = 366.0
 offset_top = 585.0
@@ -38,7 +37,7 @@ offset_right = 880.0
 offset_bottom = 654.0
 text = "Quit"
 
-[node name="TitleLabel" type="Label" parent="."]
+[node name="TitleLabel" type="Label" parent="." unique_id=1006323001]
 layout_mode = 0
 offset_left = 112.0
 offset_top = 126.0
@@ -50,5 +49,8 @@ label_settings = SubResource("LabelSettings_kwhh3")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+
+[node name="MainMenuTheme" type="AudioStreamPlayer" parent="." unique_id=1970067589]
+autoplay = true
 
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
